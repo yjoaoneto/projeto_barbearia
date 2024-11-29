@@ -1,8 +1,45 @@
-# React + Vite
+# Projeto construído durante a matéria Paradigmas de Liguagem de Programação. E consiste uma API para agendamento de horários para uma barbearia.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚉 Rotas
+Rotas de autenticação:
 
-Currently, two official plugins are available:
+/ - Tela principal de escolha ( cadastro ou login )
+/signup - Cadastro
+/siginin - Login
+/barbershops - Visualização das barbearias
+/barbershops/:id - Detalhes da barbearia
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+💻 Tecnologias
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+Node.js
+Javascript
+MongoDB
+
+Bibliotecas necessárias
+Prisma
+Axios
+Cors
+
+🚀 Como rodar o projeto
+# Clone o projeto via http
+git clone https://github.com/yjoaoneto/projeto_barbearia.git
+
+# Entrar na pasta do projeto backend
+cd barbershop
+
+### Instalar as depedencias usando yarn
+npm i
+
+### Rodar o servidor
+node server.js
+
+#Rodar o projeto
+npm run dev
+
+#Rodar atualizações do banco mongo 
+npx prisma db push
+
+!!! Lembrar de vincular seu banco de dados no arquivo .env !!!
+
+
