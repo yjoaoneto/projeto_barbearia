@@ -1,0 +1,280 @@
+.barbershop_container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #013352;
+    color: white;
+}
+
+.barbershop_header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #006DA4;
+    justify-content: space-between;
+}
+
+.barbershop_logo {
+    width: 80px;
+    height: 80px;
+}
+
+.barbershop_title {
+    font-size: 36px;
+    margin: 0;
+    
+}
+
+.back_menu{
+  background-color: red;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  padding: 1px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  margin-right: 20px;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    /* Define o tamanho do carrossel */
+    max-width: 700px;
+    /* Define um tamanho máximo */
+    margin: 40px auto;
+    /* Centraliza horizontalmente */
+    perspective: 1000px;
+    height: 400px;
+    /* Ajuste para o tamanho desejado */
+    overflow: hidden;
+    background-color: #003366;
+    /* Adiciona um fundo */
+    border-radius: 15px;
+    /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Adiciona uma sombra para destaque */
+}
+
+.carousel_inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Garante que o carrossel comece da esquerda */
+    height: 100%;
+    transform: translateX(calc(-100% * var(--current-index)));
+    /* Desloca o carrossel */
+    transition: transform 0.5s ease-in-out;
+    /* Transição suave */
+}
+
+.carousel_item {
+    flex: 0 0 100%;
+    /* Cada item ocupa 100% da largura */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0.5;
+    border-radius: 8px;
+}
+
+.carousel_item.active {
+    opacity: 1;
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.image_carrosel {
+    width: auto; /* Garante que a imagem ocupe toda a largura do item */
+    height: auto; /* Garante que a imagem ocupe toda a altura do item */
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+    border-radius: 8px;
+}
+
+
+.carousel_control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    z-index: 3;
+    transition: transform 0.2s ease-in-out;
+}
+
+.carousel_control:hover {
+    transform: scale(1.1);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Ajusta a responsividade */
+@media (max-width: 768px) {
+    .carousel {
+        width: 90%;
+        height: 300px;
+    }
+
+    .carousel_item {
+        min-width: 90%;
+        flex: 0 0 100%;
+        height: 250px;
+    }
+
+    .carousel_control {
+        font-size: 1.5rem;
+    }
+
+    .image_carrosel{
+        height: 100%;
+    }
+}
+
+
+
+/*.barbershop-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.gallery-image {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gallery-button {
+    background-color: #00506e;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-button:hover {
+    background-color: #017cb1;
+}*/
+
+.barbershop_description {
+    text-align: center;
+    background-color: #006DA4;
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 400vh;
+}
+
+.about{
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+    justify-content: left;
+}
+
+.detalhes{
+    margin: 10px 0px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.detalhes_box{
+    list-style: none;
+    font-size: 18px;
+    justify-content: center;
+    text-align: left;
+
+    & strong{
+        font-size: 20px;
+        padding-right: 5px;
+    }
+}
+
+
+/* parte dos agendamentos */
+
+.container_agendamentos{
+    text-align: center;
+    background-color: #006DA4;
+    margin-top: 15px;
+    padding: 20px 0;
+    border-radius: 10px;
+    max-height: 400vh;
+
+    & h1{
+        margin: 5px 0px;
+        text-align: center;
+        font-size: 22px;
+    }
+}
+
+.box_agendamentos{
+    font-size: 18px;
+    justify-content: center;
+    text-align: left;
+    padding-left: 20px;
+    list-style: none;
+
+    & strong{
+        font-size: 20px;
+        font-weight: bold;
+        padding-right: 5px;
+    }
+}
+
+.botao_agendamento{
+  display: flex;
+  justify-content: start;
+  background-color: #003554;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+
+
+  & input{
+  width: 100%;
+  padding: 5px;
+  margin: 0px 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: ease-in-out 1s;
+  gap: 10px;
+  }
+
+  & button{
+  background-color: #006da4;
+  color: white;
+  border: none;
+  padding: 1px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  }
+
+}
+
+
+
+
+

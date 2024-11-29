@@ -1,0 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(180deg, #032030e7 0%, #006da4fd 100%);
+}
+

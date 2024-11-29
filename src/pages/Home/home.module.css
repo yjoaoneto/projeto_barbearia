@@ -1,0 +1,31 @@
+.container_home{
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    flex-direction: column;
+
+    & img{
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    
+    & button {
+        border-radius: 30px;
+        background-color:  #004D74;
+        width: 400px;
+        margin: 10px 0px;
+        height: 80px;
+        border: 1px solid #032030;
+        font-weight: bold;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    
+    
+      & button:hover{
+        opacity: 0.8;
+        color: black;
+      }
+}
